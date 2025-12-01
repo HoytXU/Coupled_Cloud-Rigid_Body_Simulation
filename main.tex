@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+
+% -------------------------------------------------------------
+% Packages
+% -------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+
+\geometry{margin=1in}
+\setstretch{1.15}
+
+% -------------------------------------------------------------
+\begin{document}
+
+\title{Cloud--Rigid Coupling Simulation}
+\author{Hao Xu}
+\date{November 2025}
+
+\maketitle
+
+% -------------------------------------------------------------
+% Introduction (Original text with citations added)
+% -------------------------------------------------------------
+\section{Introduction}
+
+Clouds are an important part of how we understand weather, atmosphere, and
+even many natural scenes in movies. However, most computer graphics simulations 
+treat clouds only as passive volumes that move with the wind and do not
+respond when something passes through them 
+\cite{Stam1999StableFluids, Fedkiw2001VisualSmoke, Dobashi2000Cloud, Harris2003GPUFluid}. 
+This creates a gap between what actually happens in nature and what current graphics 
+methods can show. To address this problem, we explore a simulation approach that allows 
+rigid objects to physically interact with warm cloud volumes. The goal is to capture 
+realistic effects, like air being pushed aside, turbulence forming behind the object,
+and moisture changing because of heat, by using a fluid model that includes
+condensation and latent heat 
+\cite{Kessler1969WarmRain, Grabowski1999TwoMoment, Nishita1996MultipleScattering, Miyazaki2007PhysCloud}.
+
+Realistic cloud-rigid body interaction is important not just for visual appeal.
+In films, games, and educational tools, people often want scenes where an object
+moves through a cloud, yet the physics behind this motion is almost always
+simplified or ignored. This means artists, scientists, and students do not get an
+accurate picture of how clouds would truly behave. Our project aims to narrow
+this gap by simulating a rigid model, such as the plane, flying through a warm
+cloud while exchanging momentum, heat, and moisture with the surrounding
+air. By doing so, we hope to provide a method that benefits visual effects,
+atmospheric education, and scientific storytelling 
+\cite{Guendelman2005Coupling, Batty2007Variational, RobinsonMosher2011Aero}.
+
+% -------------------------------------------------------------
+% Bibliography
+% -------------------------------------------------------------
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
